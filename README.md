@@ -9,6 +9,10 @@ JSONtype is a data interchange format that extends JSON with a single syntactic 
 JSON has become the de facto standard for data interchange, but it lacks native support for common data types such as dates, big integers, and decimals. Existing workarounds involve string encodings, schema annotations, or verbose wrappers, which are often ambiguous and inconvenient.
 
 JSONtype addresses this limitation with a single minimal extension.
+Prior attempts often failed by aiming for a “perfect typing system”.
+JSONtype aims to take the opposite approach: 80% of the benefit with 1% of the complexity.
+
+JSONtype respects JSON’s lightweight nature: it is not a full type system, but a natural way to annotate values, conveying intent without adding noise.
 
 ### 1.2 Design Goals
 1. **Minimalism**: Only one new syntax form (`Type(value)`)
