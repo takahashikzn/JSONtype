@@ -33,8 +33,8 @@ JSONTYPE = VALUE
 VALUE    = OBJECT / ARRAY / STRING / NUMBER / BOOLEAN / NULL / TYPED
 TYPED    = TYPENAME "(" VALUE ")"
 
-TYPENAME = UPPER *( ALPHA / DIGIT / "." )
-UPPER    = %x41-5A            ; A-Z
+TYPENAME = IDENT *( "." IDENT )
+IDENT    = ALPHA *( ALPHA / DIGIT )
 ALPHA    = %x41-5A / %x61-7A  ; A-Z / a-z
 DIGIT    = %x30-39
 ```
