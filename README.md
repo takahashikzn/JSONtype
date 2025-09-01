@@ -108,6 +108,7 @@ This design allows type names to serve as lightweight annotations: even if a typ
 - Type handlers MUST NOT execute arbitrary code.  
 - Parsers SHOULD enforce limits on nesting depth, token count, and string length.  
 - Date/Decimal/BigInt MUST be validated strictly.
+- Implementations SHOULD provide a configuration option to reject user-defined type handlers for untrusted input, treating all unknown types as simple unwrap. This prevents potential deserialization vulnerabilities.
 
 ## 7. Comparison (Informative)
 
