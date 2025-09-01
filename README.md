@@ -98,7 +98,6 @@ Wrapper(List([1,2,3])) -> [1,2,3]
 ```
 
 ## 5. Implementation Considerations
-- **Streaming**: Tokenizers can detect `TYPENAME "("` and delegate to existing JSON parsing for the inner value.  
 - **File extension**: `.jsont`  
 - **Media type**: `application/jsontype`  
 - **Error handling**: Invalid core type formats MUST produce errors. Unknown types are always unwrapped.
