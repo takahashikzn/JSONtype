@@ -78,6 +78,8 @@ UnknownType({"foo": 1, "bar": 2}) -> {"foo": 1, "bar": 2}
 Wrapper(List([1,2,3])) -> [1,2,3]
 ```
 
+This design allows type names to serve as lightweight annotations: even if a type is not defined, the surrounding context can still benefit from the label while the actual data remains usable. In other words, type names may also act as comments without breaking compatibility.
+
 ### 3.3 Compatibility
 - All valid JSON is valid JSONtype.
 - JSONtype documents containing `Type(value)` are NOT valid plain JSON, by design.
