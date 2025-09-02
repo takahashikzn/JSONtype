@@ -34,9 +34,10 @@ VALUE    = OBJECT / ARRAY / STRING / NUMBER / BOOLEAN / NULL / TYPED
 TYPED    = TYPENAME "(" VALUE ")"
 
 TYPENAME = IDENT *( "." IDENT )
-IDENT    = ALPHA *( ALPHA / DIGIT )
-ALPHA    = %x41-5A / %x61-7A  ; A-Z / a-z
-DIGIT    = %x30-39
+
+IDENT    = CHAR *( CHAR / DIGIT )
+CHAR     = %x41-5A / %x61-7A / "_" / "$"  ; A-Z / a-z / _ / $
+DIGIT    = %x30-39                        ; 0-9
 ```
 
 ### 2.2 Core Types
